@@ -1,16 +1,13 @@
-﻿module.exports = function (grunt) {
+﻿/// <binding BeforeBuild='all' />
+module.exports = function (grunt) {
     grunt.initConfig({
         clean: ["wwwroot/lib/"],
         copy: {
             main: {
                 files: [
-                    {
-                        src: "bower_components/angular/angular.js",
-                        dest: "wwwroot/lib/angular/",
-                        expand: true,
-                        filter: "isFile",
-                        flatten: true
-                    }
+                    { expand: true, filter: "isFile", flatten: true, src: "bower_components/angular/angular.js", dest: "wwwroot/lib/angular/" },
+                    { expand: true, filter: "isFile", flatten: true, src: "bower_components/angular-ui-router/release/angular-ui-router.js", dest: "wwwroot/lib/angular-ui-router/" },
+                    { expand: true, filter: "isFile", flatten: true, src: "bower_components/ngprogress/build/ngprogress.js", dest: "wwwroot/lib/ng-progress/" }
                 ]
             }
         }
