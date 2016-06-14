@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ReportIT.Application.Services
 {
-    interface ICityService
+    public interface ICityService
     {
         IEnumerable<CityDTO> GetAll();
     }
