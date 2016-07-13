@@ -7,13 +7,15 @@
     "Microsoft.AspNetCore.Server.IISIntegration": "1.0.0",
     "Microsoft.AspNetCore.Server.Kestrel": "1.0.0",
     "Microsoft.AspNetCore.StaticFiles": "1.0.0",
-    "ReportIT.Application": "1.0.0-*",
     "Microsoft.AspNetCore.Mvc.Core": "1.0.0",
     "Microsoft.AspNetCore.Mvc.ViewFeatures": "1.0.0",
     "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0",
     "Microsoft.Extensions.Logging.Abstractions": "1.0.0",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
-    "Microsoft.Extensions.Logging.Debug": "1.0.0"
+    "Microsoft.Extensions.Logging.Debug": "1.0.0",
+    "ReportIT.Application": "1.0.0-*",
+    "ReportIT.Infrastructure": "1.0.0-*",
+    "ReportIT.Infrastructure.Base": "1.0.0-*"
   },
 
   "tools": {

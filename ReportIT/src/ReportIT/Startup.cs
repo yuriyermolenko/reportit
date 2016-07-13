@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ReportIT.Application.Services;
+using ReportIT.Infrastructure.Adapter;
+using ReportIT.Infrastructure.Base.Adapter;
 
 namespace ReportIT
 {
@@ -19,6 +21,11 @@ namespace ReportIT
 
             // application services
             services.AddTransient<ICityService, CityService>();
+
+            // factories
+            var typeAdapterFactory = new AutomapperTypeAdapterFactory();
+
+            TypeAdapterFactory.SetCurrent(typeAdapterFactory);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
