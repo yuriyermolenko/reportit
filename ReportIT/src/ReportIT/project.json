@@ -1,4 +1,4 @@
-﻿{
+{
   "dependencies": {
     "Microsoft.NETCore.App": {
       "version": "1.0.0-rc2-3002702",
@@ -15,7 +15,8 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
     "ReportIT.Application": "1.0.0-*",
     "ReportIT.Infrastructure": "1.0.0-*",
-    "ReportIT.Infrastructure.Base": "1.0.0-*"
+    "ReportIT.Infrastructure.Base": "1.0.0-*",
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0"
   },
 
   "tools": {

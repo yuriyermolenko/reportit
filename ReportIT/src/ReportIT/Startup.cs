@@ -34,6 +34,7 @@ namespace ReportIT
             if (env.IsDevelopment())
             {
                 loggerFactory.AddDebug();
+                app.UseDeveloperExceptionPage();
             }
 
             app.UseDefaultFiles();

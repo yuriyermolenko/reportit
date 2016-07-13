@@ -20,6 +20,8 @@ Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ReportIT.Infrastructure.Bas
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ReportIT.Infrastructure", "src\ReportIT.Infrastructure\ReportIT.Infrastructure.xproj", "{E2420B7A-A10F-493E-8D81-438D068DFD4C}"
 EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ReportIT.DataAccess", "src\ReportIT.DataAccess\ReportIT.DataAccess.xproj", "{D2EB454B-CBF4-4E91-990B-403F5131D987}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,12 @@ Global
 		{E2420B7A-A10F-493E-8D81-438D068DFD4C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E2420B7A-A10F-493E-8D81-438D068DFD4C}.win7-x64|Any CPU.ActiveCfg = Release|Any CPU
 		{E2420B7A-A10F-493E-8D81-438D068DFD4C}.win7-x64|Any CPU.Build.0 = Release|Any CPU
+		{D2EB454B-CBF4-4E91-990B-403F5131D987}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EB454B-CBF4-4E91-990B-403F5131D987}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2EB454B-CBF4-4E91-990B-403F5131D987}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2EB454B-CBF4-4E91-990B-403F5131D987}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2EB454B-CBF4-4E91-990B-403F5131D987}.win7-x64|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2EB454B-CBF4-4E91-990B-403F5131D987}.win7-x64|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,5 +75,6 @@ Global
 		{DD13AC98-CC60-4AFA-9864-C6B8AAEA1B9C} = {404FB157-10BA-4CAD-B6F3-8DC529018662}
 		{6D292212-E43F-4CD6-B313-4611E070D179} = {404FB157-10BA-4CAD-B6F3-8DC529018662}
 		{E2420B7A-A10F-493E-8D81-438D068DFD4C} = {404FB157-10BA-4CAD-B6F3-8DC529018662}
+		{D2EB454B-CBF4-4E91-990B-403F5131D987} = {404FB157-10BA-4CAD-B6F3-8DC529018662}
 	EndGlobalSection
 EndGlobal
