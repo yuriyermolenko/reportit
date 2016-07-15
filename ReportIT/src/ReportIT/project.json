@@ -56,5 +56,9 @@
   "runtimes": {
     "win7-x64": { },
     "ubuntu.14.04-x64": { }
+  },
+
+  "DataAccessPostgreSqlProvider": {
+    "ConnectionString": "User ID=postgres;Password=postgres;Host=localhost;Port=5432;Database=reportit;Pooling=true;"
   }
 }

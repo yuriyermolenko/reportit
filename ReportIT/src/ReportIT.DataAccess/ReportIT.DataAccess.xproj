@@ -7,7 +7,7 @@
 
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>d2eb454b-cbf4-4e91-990b-403f5131d987</ProjectGuid>
+    <ProjectGuid>36ef2ad5-e172-47e5-af7a-5b802598db8c</ProjectGuid>
     <RootNamespace>ReportIT.DataAccess</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
