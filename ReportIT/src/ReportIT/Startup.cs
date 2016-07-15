@@ -1,10 +1,14 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using ReportIT.Application.Services;
+using ReportIT.DataAccess;
 using ReportIT.Infrastructure.Adapter;
 using ReportIT.Infrastructure.Base.Adapter;
+using System.IO;
 
 namespace ReportIT
 {
@@ -14,6 +18,11 @@ namespace ReportIT
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+
             // Add framework services.
             services
                 .AddMvcCore()
@@ -26,6 +35,16 @@ namespace ReportIT
             var typeAdapterFactory = new AutomapperTypeAdapterFactory();
 
             TypeAdapterFactory.SetCurrent(typeAdapterFactory);
+
+            // Use a PostgreSQL database
+            var sqlConnectionString = config["ConnectionStrings:DefaultConnection"];
+
+            services.AddDbContext<ReportITDbContext>(options =>
+                options.UseNpgsql(
+                sqlConnectionString,
+                b => b.MigrationsAssembly("ReportIT.DataAccess")
+        )
+    );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -12,10 +12,15 @@
     "Microsoft.Extensions.Logging.Abstractions": "1.0.0",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
+    "Microsoft.Extensions.Configuration.FileExtensions": "1.0.0",
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0",
+    "Microsoft.EntityFrameworkCore": "1.0.0",
+    "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0",
     "ReportIT.Application": "1.0.0-*",
     "ReportIT.Infrastructure": "1.0.0-*",
     "ReportIT.Infrastructure.Base": "1.0.0-*",
-    "Microsoft.AspNetCore.Diagnostics": "1.0.0"
+    "ReportIT.DataAccess": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0"
   },
 
   "tools": {
@@ -56,9 +61,5 @@
   "runtimes": {
     "win7-x64": { },
     "ubuntu.14.04-x64": { }
-  },
-
-  "DataAccessPostgreSqlProvider": {
-    "ConnectionString": "User ID=postgres;Password=postgres;Host=localhost;Port=5432;Database=reportit;Pooling=true;"
   }
 }
