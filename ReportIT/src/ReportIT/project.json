@@ -26,10 +26,6 @@
   },
 
   "tools": {
-    "Microsoft.AspNetCore.Server.IISIntegration.Tools": {
-      "version": "1.0.0-*",
-      "imports": "portable-net45+win8+dnxcore50"
-    },
     "Microsoft.EntityFrameworkCore.Tools": {
       "version": "1.0.0-*",
       "imports": "portable-net452+win81"

@@ -5,9 +5,7 @@
     "NETStandard.Library": "1.6.0",
     "Npgsql.EntityFrameworkCore.PostgreSQL": "1.0.0",
     "Microsoft.EntityFrameworkCore": "1.0.0",
-    "ReportIT.Domain": "1.0.0-*",
-    "Microsoft.EntityFrameworkCore.Tools": { "version": "1.0.0-*", "type": "build" },
-    "Microsoft.EntityFrameworkCore.Design": { "version": "1.0.0-*", "type": "build" }
+    "ReportIT.Domain": "1.0.0-*"
   },
 
  "frameworks": {

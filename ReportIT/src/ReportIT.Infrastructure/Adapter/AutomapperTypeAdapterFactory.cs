@@ -19,18 +19,15 @@ namespace ReportIT.Infrastructure.Adapter
 
         public ITypeAdapter Create()
         {
-            if (_typeAdapter == null)
+            Mapper.Initialize(config =>
             {
-                Mapper.Initialize(config =>
+                foreach (var profile in _profiles)
                 {
-                    foreach (var profile in _profiles)
-                    {
-                        config.AddProfile(profile);
-                    }
-                });
-            }
+                    config.AddProfile(profile);
+                }
+            });
 
-            return _typeAdapter ?? new AutoMapperTypeAdapter();
+            return _typeAdapter;
         }
 
         public void Register(Profile profile)

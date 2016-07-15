@@ -4,8 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using ReportIT.Application.Mappings;
 using ReportIT.Application.Services;
 using ReportIT.DataAccess;
+using ReportIT.DataAccess.UnitOfWork;
+using ReportIT.DataAccess.UnitOfWork.Base;
 using ReportIT.Infrastructure.Adapter;
 using ReportIT.Infrastructure.Base.Adapter;
 using System.IO;
@@ -31,8 +34,13 @@ namespace ReportIT
             // application services
             services.AddTransient<ICityService, CityService>();
 
+            services.AddTransient<IDbContext, ReportITDbContext>();
+            services.AddTransient<IUnitOfWork, UnitOfWork>();
+
             // factories
             var typeAdapterFactory = new AutomapperTypeAdapterFactory();
+
+            typeAdapterFactory.Register(new AutomapperProfile());
 
             TypeAdapterFactory.SetCurrent(typeAdapterFactory);
 
@@ -46,8 +54,6 @@ namespace ReportIT
                 sqlConnectionString,
                 b => b.MigrationsAssembly("ReportIT")
             ));
-
-            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

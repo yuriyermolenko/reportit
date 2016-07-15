@@ -1,13 +1,20 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using ReportIT.DataAccess.UnitOfWork.Base;
 using ReportIT.Domain.Aggregates.CityAgg;
 
 namespace ReportIT.DataAccess
 {
-    public class ReportITDbContext : DbContext
+    public class ReportITDbContext : DbContext, IDbContext
     {
         public ReportITDbContext(
             DbContextOptions<ReportITDbContext> options) :base(options)
         {
+        }
+
+        public DbSet<TEntity> DbSet<TEntity>() where TEntity : class
+        {
+            return base.Set<TEntity>();
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
