@@ -39,12 +39,15 @@ namespace ReportIT
             // Use a PostgreSQL database
             var sqlConnectionString = config["ConnectionStrings:DefaultConnection"];
 
+            services.AddEntityFrameworkNpgsql();
+
             services.AddDbContext<ReportITDbContext>(options =>
                 options.UseNpgsql(
                 sqlConnectionString,
-                b => b.MigrationsAssembly("ReportIT.DataAccess")
-        )
-    );
+                b => b.MigrationsAssembly("ReportIT")
+            ));
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
