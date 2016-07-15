@@ -12,7 +12,7 @@ namespace ReportIT.Infrastructure.Adapter
 
         public void Update<TSource, TResult>(TSource source, TResult result)
         {
-            throw new NotImplementedException();
+            AutoMapper.Mapper.Map(source, result);
         }
     }
 }
